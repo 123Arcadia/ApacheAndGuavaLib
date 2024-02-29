@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/Test/Apache_commons_langs/lang/RandomStringTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/Test/MyClassLoaderTest/MyClassLoader.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/Test/MyClassLoaderTest/MyClassLoaderTest01.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/Test/guava01/BiMapTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/Test/guava01/BooleansTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/Test/guava01/CharMatcherTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/Test/guava01/IntsTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/Test/guava01/MultimapTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/Test/guava01/MultisetTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/Test/guava01/RateLimiterTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/Test/guava01/TableTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/Test/guava01/stopWatchTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
