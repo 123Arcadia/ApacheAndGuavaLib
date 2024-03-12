@@ -6,7 +6,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 /**
- * ×Ô¶¨Òåclassloader
+ * è‡ªå®šä¹‰classloader
  */
 public class MyClassLoader1 extends ClassLoader {
 
@@ -49,7 +49,7 @@ public class MyClassLoader1 extends ClassLoader {
         return super.findClass(name);
     }
 
-    //»ñÈ¡Òª¼ÓÔØ µÄclassÎÄ¼şÃû
+    //è·å–è¦åŠ è½½ çš„classæ–‡ä»¶å
     private String getFileName(String name) {
         int index = name.lastIndexOf('.');
         if(index == -1){

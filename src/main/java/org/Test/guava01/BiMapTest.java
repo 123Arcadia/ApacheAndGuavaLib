@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Set;
 
 /**
- * BiMap (Ë«ÏòÓ³Éä)£¬ÊÇÒ»ÖÖ±£³ÖÆäÖµºÍ¼üµÄÎ¨Ò»ĞÔµÄÓ³Éä£¬´ËÔ¼ÊøÊ¹ BiMap Ö§³Ö "·´ÏòÊÓÍ¼"£¬
- * ³£ÓÃµÄÊµÏÖÓĞ {@link HashBiMap}
- * HashBiMap ÓÉÁ½¸ö¹şÏ£±íÖ§³Ö£¬¼üºÍÖµÔÊĞíÎª null£¬µ«ÊÇ×¢Òâ£ºkey ±ØĞëÎ¨Ò»£¬value Ò²±ØĞëÎ¨Ò»£¬Ïàµ±ÓÚ key ºÍ value ¶¼ÊÇÓÃ Set ´æ´¢Ò»Ñù¡£
+ * BiMap (åŒå‘æ˜ å°„)ï¼Œæ˜¯ä¸€ç§ä¿æŒå…¶å€¼å’Œé”®çš„å”¯ä¸€æ€§çš„æ˜ å°„ï¼Œæ­¤çº¦æŸä½¿ BiMap æ”¯æŒ "åå‘è§†å›¾"ï¼Œ
+ * å¸¸ç”¨çš„å®ç°æœ‰ {@link HashBiMap}
+ * HashBiMap ç”±ä¸¤ä¸ªå“ˆå¸Œè¡¨æ”¯æŒï¼Œé”®å’Œå€¼å…è®¸ä¸º nullï¼Œä½†æ˜¯æ³¨æ„ï¼škey å¿…é¡»å”¯ä¸€ï¼Œvalue ä¹Ÿå¿…é¡»å”¯ä¸€ï¼Œç›¸å½“äº key å’Œ value éƒ½æ˜¯ç”¨ Set å­˜å‚¨ä¸€æ ·ã€‚
  *
  * @author wangMaoXiong
  * @version 1.0
@@ -18,54 +18,54 @@ import java.util.Set;
  */
 public class BiMapTest {
     /**
-     * 1¡¢V put(@Nullable K key, @Nullable V value)
-     * key ÖØ¸´Ê±£¬»á¸²¸Ç¾ÉÖµ£¬Èç¹û¸ø¶¨ÖµÒÑ°ó¶¨µ½´Ë biMap ÖĞµÄÆäËû¼ü£¬ÔòÅ×³ö IllegalArgumentException¡£
-     * Òª±ÜÃâ´ËÒì³££¬Çë¸ÄÎªµ÷ÓÃ {@link#forcePut}¡£
+     * 1ã€V put(@Nullable K key, @Nullable V value)
+     * key é‡å¤æ—¶ï¼Œä¼šè¦†ç›–æ—§å€¼ï¼Œå¦‚æœç»™å®šå€¼å·²ç»‘å®šåˆ°æ­¤ biMap ä¸­çš„å…¶ä»–é”®ï¼Œåˆ™æŠ›å‡º IllegalArgumentExceptionã€‚
+     * è¦é¿å…æ­¤å¼‚å¸¸ï¼Œè¯·æ”¹ä¸ºè°ƒç”¨ {@link#forcePut}ã€‚
      *
-     * 2¡¢BiMap<V, K> inverse()
-     * ·µ»Ø´Ë BiMap µÄ·´ÏòÊÓÍ¼£¬key Óë value µ÷»»
+     * 2ã€BiMap<V, K> inverse()
+     * è¿”å›æ­¤ BiMap çš„åå‘è§†å›¾ï¼Œkey ä¸ value è°ƒæ¢
      */
     @Test
     public void HashBiMap1() {
         BiMap<String, String> biMap = HashBiMap.create();
-        biMap.put("ÕÅÈı", "2268461752@qq.com");
-        biMap.put("ÀîËÄ", "7858461752@qq.com");
-        //{ÕÅÈı=2268461752@qq.com, ÀîËÄ=7858461752@qq.com}
+        biMap.put("å¼ ä¸‰", "2268461752@qq.com");
+        biMap.put("æå››", "7858461752@qq.com");
+        //{å¼ ä¸‰=2268461752@qq.com, æå››=7858461752@qq.com}
         System.out.println(biMap);
 
-        String s = biMap.get("ÀîËÄ");
-        System.out.println("ÀîËÄ->" + s);
-        //ÀîËÄ->7858461752@qq.com
+        String s = biMap.get("æå››");
+        System.out.println("æå››->" + s);
+        //æå››->7858461752@qq.com
 
-        // K - V: Ó³Éäµ¹×ª
+        // K - V: æ˜ å°„å€’è½¬
         BiMap<String, String> inverseBiMap = biMap.inverse();
-        //{2268461752@qq.com=ÕÅÈı, 7858461752@qq.com=ÀîËÄ}
+        //{2268461752@qq.com=å¼ ä¸‰, 7858461752@qq.com=æå››}
         System.out.println(inverseBiMap);
-        //{ÕÅÈı=2268461752@qq.com, ÀîËÄ=7858461752@qq.com}
+        //{å¼ ä¸‰=2268461752@qq.com, æå››=7858461752@qq.com}
         System.out.println(biMap);
     }
 
     /**
      * 3. forcePut(@Nullable K key, @Nullable V value)
-     * putµÄÁíÒ»ÖÖĞÎÊ½£¬ÔÚ¼ÌĞø put ²Ù×÷Ö®Ç°£¬Ëü»á¾²Ä¬µØÉ¾³ıÖµÎª value µÄÈÎºÎÏÖÓĞÌõÄ¿
+     * putçš„å¦ä¸€ç§å½¢å¼ï¼Œåœ¨ç»§ç»­ put æ“ä½œä¹‹å‰ï¼Œå®ƒä¼šé™é»˜åœ°åˆ é™¤å€¼ä¸º value çš„ä»»ä½•ç°æœ‰æ¡ç›®
      * 4. void putAll(Map<? extends K, ? extends V> map)
-     *      (1) putAllÖĞ´æÔÚ Í¬Key¡¢Í¬value Ê±»áÅ×³öÒì³£java.lang.IllegalArgumentException: value already present:
+     *      (1) putAllä¸­å­˜åœ¨ åŒKeyã€åŒvalue æ—¶ä¼šæŠ›å‡ºå¼‚å¸¸java.lang.IllegalArgumentException: value already present:
      */
     @Test
     public void HashBiMap2() {
         BiMap<String, String> biMap = HashBiMap.create();
-        biMap.put("ÕÅÈı", "2268461752@qq.com");
-        biMap.put("ÀîËÄ", "7858461752@qq.com");
-        biMap.forcePut("ÍõÎå", "2268461752@qq.com");
-        //{ÀîËÄ=7858461752@qq.com, ÍõÎå=2268461752@qq.com}
+        biMap.put("å¼ ä¸‰", "2268461752@qq.com");
+        biMap.put("æå››", "7858461752@qq.com");
+        biMap.forcePut("ç‹äº”", "2268461752@qq.com");
+        //{æå››=7858461752@qq.com, ç‹äº”=2268461752@qq.com}
         System.out.println(biMap);
 
         HashMap<String, String> hashMap = new HashMap();
-        hashMap.put("ÂíÁù", "12437484674567@163.com");
-        hashMap.put("Âí´óµ¨", "986768799989@163.com");
+        hashMap.put("é©¬å…­", "12437484674567@163.com");
+        hashMap.put("é©¬å¤§èƒ†", "986768799989@163.com");
 
         biMap.putAll(hashMap);
-        //{ÀîËÄ=7858461752@qq.com, ÍõÎå=2268461752@qq.com, ÂíÁù=12437484674567@163.com, Âí´óµ¨=986768799989@163.com}
+        //{æå››=7858461752@qq.com, ç‹äº”=2268461752@qq.com, é©¬å…­=12437484674567@163.com, é©¬å¤§èƒ†=986768799989@163.com}
         System.out.println("biMap:putAll:" + biMap);
 
         Set<String> values = biMap.values();
